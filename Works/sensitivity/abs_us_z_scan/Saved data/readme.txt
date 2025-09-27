@@ -1,0 +1,1 @@
+Each folder represents different source-detector positions/seperation

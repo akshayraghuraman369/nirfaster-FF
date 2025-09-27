@@ -69,7 +69,7 @@ mesh.meas = ff.base.optode(np.array([50,30,60]))
 mesh.touch_optodes()
 
 # %%
-xgrid = np.arange(0., 60, 0.5)
+xgrid = np.arange(0., 60, 0.5)  
 ygrid = np.arange(0., 60, 0.5)
 zgrid = np.arange(0., 60, 0.5)
 
@@ -99,7 +99,7 @@ plt.show()
 mesh.kappa = 1/(3*(mesh.mua + mesh.mus))
 J0_full,data0,_=ff.inverse.jacobian_stnd_CW(mesh, normalize=0, mus =True)
 print(J0_full.shape)
-J0_mus = J0_full[:,:1728000]
+J0_mus = J0_full[:,:1728000]   # replace 1728000 with 'xgrid.size * ygrid.size * zgrid.size'
 J0_mua = J0_full[:,1728000:]
 
 
